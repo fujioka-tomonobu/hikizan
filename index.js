@@ -53,8 +53,8 @@ var event = new function(){
 	var 何問目 = 0;
 	var 一歩距離 = 0;
 	
-	var 第一項範囲;
-	var 第二項範囲;
+	var ひき算_第一項範囲;
+	var ひき算_第二項範囲;
 	
 	var カービ移動回数 = 0;
 	var デデデ移動回数 = 0;
@@ -84,10 +84,10 @@ var event = new function(){
 	 */
 	this.easy = function(){
 		event.startMusic();
-		一問時間 = 5 * 1000;
+		一問時間 = 3 * 1000;
 		
-		第一項範囲 = [5, 19];
-		第二項範囲 = [1, 9];
+		ひき算_第一項範囲 = [5, 19];
+		ひき算_第二項範囲 = [1, 9];
 		
 		event.countDown();
 	};
@@ -97,10 +97,10 @@ var event = new function(){
 	 */
 	this.normal = function(){
 		event.startMusic();
-		一問時間 = 15 * 1000;
+		一問時間 = 7 * 1000;
 		
-		第一項範囲 = [10, 50];
-		第二項範囲 = [1, 9];
+		ひき算_第一項範囲 = [10, 50];
+		ひき算_第二項範囲 = [1, 9];
 		
 		event.countDown();
 	};
@@ -110,10 +110,10 @@ var event = new function(){
 	 */
 	this.hard = function(){
 		event.startMusic();
-		一問時間 = 5 * 1000;
+		一問時間 = 7 * 1000;
 		
-		第一項範囲 = [1, 99];
-		第二項範囲 = [1, 99];
+		ひき算_第一項範囲 = [1, 99];
+		ひき算_第二項範囲 = [1, 99];
 		
 		event.countDown();
 	};
@@ -123,10 +123,10 @@ var event = new function(){
 	 */
 	this.veryhard = function(){
 		event.startMusic();
-		一問時間 = 1.7 * 1000;
+		一問時間 = 2 * 1000;
 		
-		第一項範囲 = [1, 99];
-		第二項範囲 = [1, 99];
+		ひき算_第一項範囲 = [1, 99];
+		ひき算_第二項範囲 = [1, 99];
 		
 		event.countDown();
 	};
@@ -178,10 +178,8 @@ var event = new function(){
 
 		何問目++;
 		
-		console.log(第一項範囲[0]);
-		console.log(第一項範囲[1]);
-		var num1 = Math.floor(Math.random() * (第一項範囲[1] - 第一項範囲[0])) + 第一項範囲[0];
-		var num2 = Math.floor(Math.random() * (第二項範囲[1] - 第二項範囲[0])) + 第二項範囲[0];
+		var num1 = Math.floor(Math.random() * (ひき算_第一項範囲[1] - ひき算_第一項範囲[0])) + ひき算_第一項範囲[0];
+		var num2 = Math.floor(Math.random() * (ひき算_第二項範囲[1] - ひき算_第二項範囲[0])) + ひき算_第二項範囲[0];
 		
 		if(num1 < num2) {
 			num2 = Math.floor(Math.random() * num1);
