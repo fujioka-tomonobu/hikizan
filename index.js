@@ -112,7 +112,7 @@ var event = new function(){
 		event.startMusic();
 		一問時間 = 12 * 1000;
 		
-		ひき算_第一項範囲 = [1, 99];
+		ひき算_第一項範囲 = [30, 99];
 		ひき算_第二項範囲 = [1, 99];
 		
 		event.countDown();
@@ -125,8 +125,8 @@ var event = new function(){
 		event.startMusic();
 		一問時間 = 3 * 1000;
 		
-		ひき算_第一項範囲 = [1, 99];
-		ひき算_第二項範囲 = [1, 99];
+		ひき算_第一項範囲 = [30, 200];
+		ひき算_第二項範囲 = [10, 99];
 		
 		event.countDown();
 	};
