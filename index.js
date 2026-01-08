@@ -217,7 +217,7 @@ var event = new function(){
 
 				clearInterval(dededeAnimeId);
 				
-				if(カービ移動回数 >= デデデ移動回数) {
+				if(カービ移動回数 > デデデ移動回数) {
 					event.win();
 				}else{
 					event.lose();
@@ -248,7 +248,7 @@ var event = new function(){
 	this.runDedede = function(){
 		
 		dededeAnimeId = setInterval(function(){
-			
+		
 			if(デデデ移動回数 >= 問題数) {
 				clearInterval(dededeAnimeId);
 				return;
@@ -274,10 +274,8 @@ var event = new function(){
 		
 		var cnt = 1;
 		var moveAnimeId = setInterval(function(){
-			
 			var position = (移動回数 * 一歩距離) + (進む距離 / 50) * cnt;
 			target.css('left', position);
-			
 			if(cnt >= 50) {
 				clearInterval(moveAnimeId);
 				return;
