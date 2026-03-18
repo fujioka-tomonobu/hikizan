@@ -179,8 +179,8 @@ var event = new function(){
 
 		何問目++;
 		
-		var num1 = Math.floor(Math.random() * (ひき算_第一項範囲[1] - ひき算_第一項範囲[0])) + ひき算_第一項範囲[0];
-		var num2 = Math.floor(Math.random() * (ひき算_第二項範囲[1] - ひき算_第二項範囲[0])) + ひき算_第二項範囲[0];
+		var num1 = Math.floor(Math.random() * (ひき算_第一項範囲[1] - ひき算_第一項範囲[0] + 1)) + ひき算_第一項範囲[0];
+		var num2 = Math.floor(Math.random() * (ひき算_第二項範囲[1] - ひき算_第二項範囲[0] + 1)) + ひき算_第二項範囲[0];
 		
 		if(num1 < num2) {
 			num2 = Math.floor(Math.random() * num1);
